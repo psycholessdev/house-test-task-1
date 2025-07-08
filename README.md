@@ -1,12 +1,23 @@
-# React + Vite
+## Тестовое задание frontend разработчика №1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Задание](https://icy-diadem-881.notion.site/frontend-1-d497c1823b134c7bb1680be999024cff) | [Макет в Figma](https://www.figma.com/design/uwSfiT1xArtAE9gIvfqprp/Feedback-form?node-id=3-194&t=KMT50noulGLB3Ouo-0)
 
-Currently, two official plugins are available:
+### Как запускать?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Сначала нужно установить зависимости: `npm install`
+- Собрать проект `npm run build`
+- А затем запустить `npm run preview`
 
-## Expanding the ESLint configuration
+### Структура проекта
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Я выбрал `React` для создания проекта, [Zod](https://zod.dev/) для валидации формы и `SCSS`.
+
+`Zod` обеспечивает легкую и легко поддерживаемую валидацию, а `React` легкое управление DOM-деревом и компонентную архитектуру.
+Для проверки номера телефона был создан кастомный Regexp. Пробелы и скобки сделаны опциональными для удобства пользователя.
+
+- Проект сделан с использованием `BEM` архитектуры.
+- У каждого компонента своя папка и его логика инкапсулирована, что делает их легко переиспользуемыми и поддерживаемыми.
+- Настроен alias на папку `src` для поддержки consistent-путей.
+- Созданы файлы переэкспорта (barrel exports) для более удобного и читаемого импорта компонентов 
+- Реализована отправка формы с помощью AJAX (Fetch API).
+- Реализована обработка ответа с сервера
