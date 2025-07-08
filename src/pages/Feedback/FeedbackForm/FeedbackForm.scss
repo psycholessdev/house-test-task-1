@@ -1,10 +1,13 @@
+$form-width: 598px;
+
 .feedback-form {
-  width: 598px;
+  width: $form-width;
   display: flex;
   flex-direction: column;
   gap: 26px;
   background-color: #fff;
   padding: 45px 56px;
+  box-sizing: border-box;
 
   &__title {
     font-family: 'Inter';
@@ -46,5 +49,14 @@
     text-align: center;
     line-height: 20px;
     text-decoration: underline;
+  }
+
+  @media (max-width: $form-width) {
+    width: 100%;
+    gap: 5px;
+
+    &__inputs-row-wrapper {
+      flex-direction: column;
+    }
   }
 }
