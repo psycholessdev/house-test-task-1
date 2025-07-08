@@ -1,0 +1,50 @@
+.feedback-form {
+  width: 598px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  background-color: #fff;
+  padding: 45px 56px;
+
+  &__title {
+    font-family: 'Inter';
+    color: #263238;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100%;
+  }
+
+  &__inputs-row-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 21px;
+  }
+
+  &__input-wrapper {
+    width: 100%;
+  }
+
+  &__button-center-wrapper {
+    align-self: center;
+  }
+
+  &__agreement {
+    font-family: 'Inter';
+    color: #263238;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  &__agreement-link {
+    font-family: 'Inter';
+    color: #263238;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 20px;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,73 @@
+.textarea {
+  position: relative;
+  width: 100%;
+  $textarea-padding: 16px;
+
+  &__textarea {
+    height: 120px;
+    min-height: 120px;
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #dcdedf;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: calc($textarea-padding + 1px);
+  }
+  &__textarea:focus {
+    outline: none;
+    border: 2px solid #1BB55C;
+    padding: $textarea-padding;
+  }
+
+  &__label {
+    cursor: text;
+
+    pointer-events: none;
+    -webkit-user-select: none;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $textarea-padding;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__label-text {
+    top: 17px;
+    position: absolute;
+    width: max-content;
+    font-family: 'Inter';
+    font-size: 16px;
+    color: #c0c0c0;
+    -webkit-user-select: none;
+    transition: all 0.15s ease-out;
+  }
+
+  &__textarea:focus + &__label &__label-text,
+  &__textarea:not(:placeholder-shown) + &__label &__label-text {
+    font-size: 12px;
+
+    transform: translate(0, -100%);
+    top: 8px;
+
+    padding-left: 4px;
+    padding-right: 4px;
+
+    background-color: white;
+    color: black;
+  }
+
+  &__textarea:focus + &__label &__label-text {
+    color: #1BB55C;
+  }
+
+  &__textarea:not(:focus)::placeholder {
+    color: transparent;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+  }
+}
