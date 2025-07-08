@@ -19,6 +19,11 @@
     padding: $textarea-padding;
   }
 
+  &__textarea::placeholder {
+    color: gray;
+    transition: color 200ms ease-in-out;
+  }
+
   &__label {
     cursor: text;
 
